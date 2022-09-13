@@ -9,13 +9,17 @@ Option Infer Off
 ' Team Member 4 Details: Donnaghie, JB (222098397)
 ' Practical: Team Project
 ' *****************************************************************
-Public Class Country
+Public MustInherit Class Country
 
     Protected _Name As String
     Protected _Population As Integer
     Protected _NumCities As Integer
     Protected _Consumption As Double
     Protected _Investment As Double
+
+    Public Sub New()
+
+    End Sub
 
     Public Property Name As String
 
@@ -62,5 +66,9 @@ Public Class Country
             _Investment = value
         End Set
     End Property
+
+    Public Overridable Function CalcGPD() As Double
+        Return 0
+    End Function
 
 End Class
