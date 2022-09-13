@@ -1,0 +1,6 @@
+C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.AssemblyReference.cache
+C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.frmGDP.resources
+C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.Resources.resources
+C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.GenerateResource.cache
+C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.CoreCompileInputs.cache
