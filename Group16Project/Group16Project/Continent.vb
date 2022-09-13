@@ -2,11 +2,11 @@
 Option Explicit On
 Option Infer Off
 ' *****************************************************************
-' Team Number: assigned to team
-' Team Member 1 Details: Surname, Initials (Student #)
-' Team Member 2 Details: Surname, Initials (Student #)
-' Team Member 3 Details: Surname, Initials (Student #)
-' Team Member 4 Details: e.g. Smith, J (202000001)
+' Team Number: 16
+' Team Member 1 Details: Kuwandira, A (222062566)
+' Team Member 2 Details: Mkhabela, PL (222072645)
+' Team Member 3 Details: Phalane CK (222008253)
+' Team Member 4 Details: Donnaghie, JB (222098397)
 ' Practical: Team Project
 ' *****************************************************************
 Public Class Continent

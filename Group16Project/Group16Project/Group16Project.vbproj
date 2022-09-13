@@ -75,6 +75,8 @@
   <ItemGroup>
     <Compile Include="Continent.vb" />
     <Compile Include="Country.vb" />
+    <Compile Include="Country1.vb" />
+    <Compile Include="Country2.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
