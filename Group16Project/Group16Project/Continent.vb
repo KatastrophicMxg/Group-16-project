@@ -10,5 +10,40 @@ Option Infer Off
 ' Practical: Team Project
 ' *****************************************************************
 Public Class Continent
+    Private _Name As String
+    Private _NumCountries As Integer
+    Private _Population As Integer
 
+    Public Property Name As String
+        Get
+            Return _Name
+        End Get
+        Set(value As String)
+            _Name = value
+        End Set
+    End Property
+
+    Public Property Numcountries As Integer
+        Get
+            Return _NumCountries
+        End Get
+        Set(value As Integer)
+            _NumCountries = value
+        End Set
+    End Property
+
+    Public Property Population As Integer
+        Get
+            Return _Population
+        End Get
+        Set(value As Integer)
+            _Population = value
+        End Set
+    End Property
+
+    Public Sub New()
+        Name = _Name
+        Numcountries = _NumCountries
+        Population = _Population
+    End Sub
 End Class
