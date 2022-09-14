@@ -41,9 +41,9 @@ Public Class Continent
         End Set
     End Property
 
-    Public Sub New()
-        Name = _Name
-        Numcountries = _NumCountries
-        Population = _Population
+    Public Sub New(Nam As String, numCoun As Integer, Pop As Integer)
+        _Name = Nam
+        _NumCountries = numCoun
+        _Population = Pop
     End Sub
 End Class

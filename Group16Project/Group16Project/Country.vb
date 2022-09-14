@@ -13,13 +13,8 @@ Public MustInherit Class Country
 
     Protected _Name As String
     Protected _Population As Integer
-    Protected _NumCities As Integer
     Protected _Consumption As Double
     Protected _Investment As Double
-
-    Public Sub New()
-
-    End Sub
 
     Public Property Name As String
         Get
@@ -32,19 +27,14 @@ Public MustInherit Class Country
 
     Public Property Population As Integer
         Get
+
             Return _Population
         End Get
         Set(value As Integer)
-            _Population = value
-        End Set
-    End Property
-
-    Public Property NumCities As Integer
-        Get
-            Return _NumCities
-        End Get
-        Set(value As Integer)
-            _NumCities = value
+            If _Population <= 0 Then
+            Else
+                _Population = value
+            End If
         End Set
     End Property
 
@@ -65,6 +55,13 @@ Public MustInherit Class Country
             _Investment = value
         End Set
     End Property
+    Public Sub New(Nam As String, Pop As Integer, Consump As Double, Invest As Double)
+        _Name = Nam
+        _Population = Pop
+        _Consumption = Consump
+        _Investment = Invest
+
+    End Sub
 
     Public MustOverride Function CalcGPD() As Double
 

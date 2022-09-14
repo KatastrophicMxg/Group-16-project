@@ -23,7 +23,11 @@ Public Class Country2
             Return _NumBirths
         End Get
         Set(value As Integer)
-            _NumBirths = value
+            If value < Population Then
+                _NumBirths = value
+            Else
+                _NumBirths = Population
+            End If
         End Set
     End Property
 
@@ -32,7 +36,11 @@ Public Class Country2
             Return _Numdeaths
         End Get
         Set(value As Integer)
-            _Numdeaths = value
+            If value < Population Then
+                _Numdeaths = value
+            Else
+                _Numdeaths = Population
+            End If
         End Set
     End Property
 
@@ -47,16 +55,38 @@ Public Class Country2
 
     ''constructors
 
-    Public Sub New(ND As Integer, NB As Integer)
-        _Numdeaths = ND
-        _NumBirths = NB
-    End Sub
-    Public Sub New(ND As Integer, NB As Integer, NU As Integer)
+
+
+    Public Sub New(nam As String, Pop As Integer, Conspt As Double, Inve As Double, ND As Integer, NB As Integer, NU As Integer)
+        MyBase.New(nam, Pop, Conspt, Inve)
         _Numdeaths = ND
         _NumBirths = NB
         _NumUnemployed = NU
     End Sub
+    Public Overrides Function CalcGPD() As Double
 
+    End Function
+    Public Function DeathRates() As Double
+        Dim Rate As Double
+        Rate = DeathRates / Population
+
+        Return Rate
+    End Function
+
+    Public Function Birthrates() As Double
+        Dim Rate As Double
+        Rate = Birthrates / Population
+
+        Return Rate
+    End Function
+
+    Public Function UnemployedRates() As Double
+        Dim Rate As Double
+        Rate = UnemployedRates / Population
+
+        Return Rate
+
+    End Function
 
 End Class
 

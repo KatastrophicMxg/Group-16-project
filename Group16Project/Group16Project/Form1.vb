@@ -9,8 +9,8 @@ Option Infer Off
 ' Team Member 4 Details: Donnaghie, JB (222098397)
 ' Practical: Team Project
 ' *****************************************************************
-Public Class frmGDP
-
-
-
+Public Class FrmGDP
+    Private Sub DisplayIG(ByVal r As Integer, ByVal c As Integer, ByRef t As String)
+        grdDisplay
+    End Sub
 End Class

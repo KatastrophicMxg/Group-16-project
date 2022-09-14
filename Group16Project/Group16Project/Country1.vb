@@ -56,11 +56,36 @@ Public Class Country1
     End Property
 
     'Constructors
-    Public Sub New(NI As Double, RANGE As Double, NID As Integer, NEP As Integer)
+    Public Sub New(nam As String, Pop As Integer, Conspt As Double, Inve As Double, NI As Double, RANGE As Double, NID As Integer, NEP As Integer)
+        MyBase.New(nam, Pop, Conspt, Inve)
         _NetIncome = NI
         _Range = RANGE
         _NumInfantsDeath = NID
         _NumEducatedPeople = NEP
     End Sub
+
+    'Calculations
+    Public Overrides Function CalcGPD() As Double
+
+    End Function
+
+    Public Function IMR() As Double
+        Dim Value As Double
+        Value = NumInfantsDeath / Population
+        Return Value
+    End Function
+
+    Public Function Literacy() As Double
+        Dim Value As Double
+        Value = NumEducatedPeople / Population
+        Return Value
+    End Function
+
+    Public Function GNP() As Double
+        Dim Value As Double
+        Value = NetIncome / Population
+        Return Value
+    End Function
+
 
 End Class
