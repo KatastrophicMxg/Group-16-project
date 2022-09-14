@@ -19,8 +19,6 @@ Public MustInherit Class Country
 
     Public Sub New()
 
-
-
     End Sub
 
     Public Property Name As String
