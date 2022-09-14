@@ -4,3 +4,10 @@ C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\De
 C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.Resources.resources
 C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.GenerateResource.cache
 C:\Users\Asus\Source\Repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\Debug\Group16Project.exe.config
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\Debug\Group16Project.exe
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\Debug\Group16Project.pdb
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\Debug\Group16Project.xml
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.exe
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.xml
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.pdb

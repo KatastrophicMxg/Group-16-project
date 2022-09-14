@@ -19,10 +19,11 @@ Public MustInherit Class Country
 
     Public Sub New()
 
+
+
     End Sub
 
     Public Property Name As String
-
         Get
             Return _Name
         End Get
@@ -67,8 +68,7 @@ Public MustInherit Class Country
         End Set
     End Property
 
-    Public Overridable Function CalcGPD() As Double
-        Return 0
-    End Function
+    Public MustOverride Function CalcGPD() As Double
+
 
 End Class
