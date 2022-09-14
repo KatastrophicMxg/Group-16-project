@@ -71,19 +71,19 @@ Public Class Country1
 
     Public Function IMR() As Double
         Dim Value As Double
-        Value = NumInfantsDeath / Population
+        Value = Math.Round(NumInfantsDeath / Population, 2)
         Return Value
     End Function
 
     Public Function Literacy() As Double
         Dim Value As Double
-        Value = NumEducatedPeople / Population
+        Value = Math.Round(NumEducatedPeople / Population)
         Return Value
     End Function
 
     Public Function GNP() As Double
         Dim Value As Double
-        Value = NetIncome / Population
+        Value = Math.Round(NetIncome / Population)
         Return Value
     End Function
 

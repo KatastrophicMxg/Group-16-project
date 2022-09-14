@@ -68,21 +68,21 @@ Public Class Country2
     End Function
     Public Function DeathRates() As Double
         Dim Rate As Double
-        Rate = DeathRates / Population
+        Rate = Math.Round(NumDeaths / Population)
 
         Return Rate
     End Function
 
     Public Function Birthrates() As Double
         Dim Rate As Double
-        Rate = Birthrates / Population
+        Rate = Math.Round(NumBirths / Population)
 
         Return Rate
     End Function
 
     Public Function UnemployedRates() As Double
         Dim Rate As Double
-        Rate = UnemployedRates / Population
+        Rate = Math.Round(NumUnemployed / Population)
 
         Return Rate
 
