@@ -5,11 +5,12 @@ Option Infer Off
 ' Team Number: 16
 ' Team Member 1 Details: Kuwandira, A (222062566)
 ' Team Member 2 Details: Mkhabela, PL (222072645)
-' Team Member 3 Details: Phalane CK (222008253)
+' Team Member 3 Details: Phalane, CK (222008253)
 ' Team Member 4 Details: Donnaghie, JB (222098397)
 ' Practical: Team Project
 ' *****************************************************************
 Public Class Continent
+
     Private _Name As String
     Private _NumCountries As Integer
     Private _Population As Integer
@@ -41,8 +42,8 @@ Public Class Continent
         End Set
     End Property
 
-    Public Sub New(Nam As String, numCoun As Integer, Pop As Integer)
-        _Name = Nam
+    Public Sub New(nam As String, numCoun As Integer, Pop As Integer)
+        _Name = nam
         _NumCountries = numCoun
         _Population = Pop
     End Sub

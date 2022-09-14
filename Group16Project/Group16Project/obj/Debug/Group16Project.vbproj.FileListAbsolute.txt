@@ -11,3 +11,7 @@ C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\De
 C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.exe
 C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.xml
 C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.pdb
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\bin\Debug\UJGrid.dll
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.exe.config
+C:\Users\Asus\source\repos\Group-16-project\Group16Project\Group16Project\obj\Debug\Group16Project.vbproj.CopyComplete
