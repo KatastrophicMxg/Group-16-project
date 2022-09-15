@@ -15,7 +15,7 @@ Public MustInherit Class Country
     Protected _Population As Integer
     Protected _Consumption As Double
     Protected _Investment As Double
-    Protected _continent As Continent
+    ' Protected _continent As Continent
 
     Public Property Name As String
         Get
@@ -63,16 +63,12 @@ Public MustInherit Class Country
         _Investment = Invest
     End Sub
 
-    Public Property Continent As Continent
-        Get
-            Return _continent
-        End Get
-        Set(value As Continent)
-            _continent = value
-        End Set
-    End Property
 
-    Public MustOverride Function CalcGPD() As Double
+
+    Public MustOverride Function CalcGDP() As Double
+
+
+
 
 
 End Class

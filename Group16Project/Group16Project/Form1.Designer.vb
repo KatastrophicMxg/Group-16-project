@@ -22,55 +22,90 @@ Partial Class FrmGDP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.grdDisplay = New UJGrid.UJGrid()
+        Me.components = New System.ComponentModel.Container()
+        Me.grdCountry1 = New UJGrid.UJGrid()
         Me.btnEnter = New System.Windows.Forms.Button()
-        Me.btnDisplay = New System.Windows.Forms.Button()
+        Me.btnCountry1 = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.grdCountry2 = New UJGrid.UJGrid()
+        Me.btnCountry2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'grdDisplay
+        'grdCountry1
         '
-        Me.grdDisplay.FixedCols = 1
-        Me.grdDisplay.FixedRows = 1
-        Me.grdDisplay.Location = New System.Drawing.Point(43, 13)
-        Me.grdDisplay.Margin = New System.Windows.Forms.Padding(4)
-        Me.grdDisplay.Name = "grdDisplay"
-        Me.grdDisplay.Scrollbars = System.Windows.Forms.ScrollBars.Both
-        Me.grdDisplay.Size = New System.Drawing.Size(701, 282)
-        Me.grdDisplay.TabIndex = 0
+        Me.grdCountry1.FixedCols = 1
+        Me.grdCountry1.FixedRows = 1
+        Me.grdCountry1.Location = New System.Drawing.Point(23, 12)
+        Me.grdCountry1.Name = "grdCountry1"
+        Me.grdCountry1.Scrollbars = System.Windows.Forms.ScrollBars.Both
+        Me.grdCountry1.Size = New System.Drawing.Size(356, 344)
+        Me.grdCountry1.TabIndex = 0
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(141, 331)
+        Me.btnEnter.Location = New System.Drawing.Point(23, 427)
+        Me.btnEnter.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(120, 50)
+        Me.btnEnter.Size = New System.Drawing.Size(775, 41)
         Me.btnEnter.TabIndex = 1
         Me.btnEnter.Text = "Enter Data"
         Me.btnEnter.UseVisualStyleBackColor = True
         '
-        'btnDisplay
+        'btnCountry1
         '
-        Me.btnDisplay.Location = New System.Drawing.Point(326, 331)
-        Me.btnDisplay.Name = "btnDisplay"
-        Me.btnDisplay.Size = New System.Drawing.Size(120, 50)
-        Me.btnDisplay.TabIndex = 2
-        Me.btnDisplay.Text = "Display Data"
-        Me.btnDisplay.UseVisualStyleBackColor = True
+        Me.btnCountry1.Location = New System.Drawing.Point(23, 374)
+        Me.btnCountry1.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCountry1.Name = "btnCountry1"
+        Me.btnCountry1.Size = New System.Drawing.Size(356, 41)
+        Me.btnCountry1.TabIndex = 2
+        Me.btnCountry1.Text = "Display Country 1"
+        Me.btnCountry1.UseVisualStyleBackColor = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'grdCountry2
+        '
+        Me.grdCountry2.FixedCols = 1
+        Me.grdCountry2.FixedRows = 1
+        Me.grdCountry2.Location = New System.Drawing.Point(442, 12)
+        Me.grdCountry2.Name = "grdCountry2"
+        Me.grdCountry2.Scrollbars = System.Windows.Forms.ScrollBars.Both
+        Me.grdCountry2.Size = New System.Drawing.Size(356, 344)
+        Me.grdCountry2.TabIndex = 0
+        '
+        'btnCountry2
+        '
+        Me.btnCountry2.Location = New System.Drawing.Point(442, 374)
+        Me.btnCountry2.Name = "btnCountry2"
+        Me.btnCountry2.Size = New System.Drawing.Size(356, 41)
+        Me.btnCountry2.TabIndex = 4
+        Me.btnCountry2.Text = "Display Country 2"
+        Me.btnCountry2.UseVisualStyleBackColor = True
         '
         'FrmGDP
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnDisplay)
+        Me.ClientSize = New System.Drawing.Size(830, 479)
+        Me.Controls.Add(Me.btnCountry2)
+        Me.Controls.Add(Me.btnCountry1)
         Me.Controls.Add(Me.btnEnter)
-        Me.Controls.Add(Me.grdDisplay)
+        Me.Controls.Add(Me.grdCountry2)
+        Me.Controls.Add(Me.grdCountry1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmGDP"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents grdDisplay As UJGrid.UJGrid
+    Friend WithEvents grdCountry1 As UJGrid.UJGrid
     Friend WithEvents btnEnter As Button
-    Friend WithEvents btnDisplay As Button
+    Friend WithEvents btnCountry1 As Button
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents grdCountry2 As UJGrid.UJGrid
+    Friend WithEvents btnCountry2 As Button
 End Class

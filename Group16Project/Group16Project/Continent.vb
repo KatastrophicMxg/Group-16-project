@@ -15,6 +15,10 @@ Public Class Continent
     Private _NumCountries As Integer
     Private _Population As Integer
 
+
+
+
+
     Public Property Name As String
         Get
             Return _Name
@@ -42,9 +46,10 @@ Public Class Continent
         End Set
     End Property
 
-    Public Sub New(nam As String, numCoun As Integer, Pop As Integer)
+    Public Sub New(nam As String, Pop As Integer)
         _Name = nam
-        _NumCountries = numCoun
+        _NumCountries = 2
         _Population = Pop
+        '_Count = Count
     End Sub
 End Class

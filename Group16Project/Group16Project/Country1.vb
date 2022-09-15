@@ -65,8 +65,11 @@ Public Class Country1
     End Sub
 
     'Calculations
-    Public Overrides Function CalcGPD() As Double
+    Public Overrides Function CalcGDP() As Double
+        Dim Value As Double
+        Value = Math.Round(NetIncome * Consumption / Population, 2)
 
+        Return Value
     End Function
 
     Public Function IMR() As Double
@@ -77,15 +80,16 @@ Public Class Country1
 
     Public Function Literacy() As Double
         Dim Value As Double
-        Value = Math.Round(NumEducatedPeople / Population)
+        Value = Math.Round(NumEducatedPeople / Population, 2)
         Return Value
     End Function
 
     Public Function GNP() As Double
         Dim Value As Double
-        Value = Math.Round(NetIncome / Population)
+        Value = Math.Round(NetIncome / Population, 2)
         Return Value
     End Function
+
 
 
 End Class

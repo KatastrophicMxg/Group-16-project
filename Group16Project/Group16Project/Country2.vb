@@ -36,10 +36,10 @@ Public Class Country2
             Return _Numdeaths
         End Get
         Set(value As Integer)
-            If value < Population Then
+            If value < _Population Then
                 _Numdeaths = value
             Else
-                _Numdeaths = Population
+                _Numdeaths = _Population
             End If
         End Set
     End Property
@@ -63,26 +63,30 @@ Public Class Country2
         _NumBirths = NB
         _NumUnemployed = NU
     End Sub
-    Public Overrides Function CalcGPD() As Double
+    Public Overrides Function CalcGDP() As Double
+        Dim Value As Double
+        Value = Math.Round(NumUnemployed * Consumption / Population, 2)
+
+        Return Value
 
     End Function
     Public Function DeathRates() As Double
         Dim Rate As Double
-        Rate = Math.Round(NumDeaths / Population)
+        Rate = Math.Round(_Numdeaths / _Population, 2)
 
         Return Rate
     End Function
 
     Public Function Birthrates() As Double
         Dim Rate As Double
-        Rate = Math.Round(NumBirths / Population)
+        Rate = Math.Round(_NumBirths / _Population, 2)
 
         Return Rate
     End Function
 
     Public Function UnemployedRates() As Double
         Dim Rate As Double
-        Rate = Math.Round(NumUnemployed / Population)
+        Rate = Math.Round(NumUnemployed / Population, 2)
 
         Return Rate
 

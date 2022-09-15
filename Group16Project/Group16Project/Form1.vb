@@ -10,89 +10,124 @@ Option Infer Off
 ' Practical: Team Project
 ' *****************************************************************
 Public Class FrmGDP
-    Private Sub DisplayIG(ByVal r As Integer, ByVal c As Integer, ByRef t As String)
-        grdDisplay.Row = r
-        grdDisplay.Col = c
-        grdDisplay.Text = t
+    Private Sub DisplayC1(ByVal r As Integer, ByVal c As Integer, ByRef t As String)
+        grdCountry1.Row = r
+        grdCountry1.Col = c
+        grdCountry1.Text = t
+    End Sub
+    Private Sub DisplayC2(ByVal r As Integer, ByVal c As Integer, ByRef t As String)
+        grdCountry2.Row = r
+        grdCountry2.Col = c
+        grdCountry2.Text = t
     End Sub
 
-    Private Cntry1() As Country1
-    Private Cntry2() As Country2
-    Private iCompare As Integer
 
+
+    Private Cont(2) As Country
+    Private NUmCont As Integer
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
 
+        Dim NumC As Integer
+        Dim Nam As String
+        Dim Pop As Integer
+        Dim Consump As Double
+        Dim Invest As Double
+        NumC = CInt(InputBox("Which country do you want to enter details for: "))
+        Select Case NumC
+            Case 1
 
-        iCompare = CInt(InputBox("How many pairs would you like to compare"))
+                Dim NI As Double
+                Dim Range As Double
+                Dim NID As Integer
+                Dim NEP As Integer
 
-        Dim sName, contName As String
-        Dim iPop, iInfDeaths, iEducated, iDeaths, iBirths, iUnemployed, contPop, contCountries As Integer
-        Dim dCons, dInvest, dNetIncm, dRange As Double
+                Nam = InputBox("What is the name of country1?")
+                Pop = CInt(InputBox("What is the population of the country " & Nam))
+                Consump = CDbl(InputBox("What is the consumption of the country " & Nam))
+                Invest = CDbl(InputBox("What is the investment of the country per annum? " & Nam))
+                NI = CDbl(InputBox("What is the net income of the country per anuum " & Nam))
+                Range = CDbl(InputBox("What is the range of the country " & Nam))
+                NID = CInt(InputBox("What is the number of infant death? " & Nam))
+                NEP = CInt(InputBox("What is the number of educated people? " & Nam))
 
-        ReDim Preserve Cntry1(iCompare)
-        ReDim Preserve Cntry2(iCompare)
 
-        For i As Integer = 1 To iCompare
+                Cont(1) = New Country1(Nam, Pop, Consump, Invest, NI, Range, NID, NEP)
 
-            sName = InputBox("Enter Country1 Name")
-            iPop = CInt(InputBox("Enter " + sName + "'s population"))
-            iInfDeaths = CInt(InputBox("Enter number of Infant deaths"))
-            iEducated = CInt(InputBox("Enter number of Educated people"))
-            dCons = CDbl(InputBox("Enter Consumption"))
-            dInvest = CDbl(InputBox("Enter Invesntment"))
-            dNetIncm = CDbl(InputBox("Enter Net Income"))
-            dRange = CDbl(InputBox("Enter Range"))
-            Cntry1(i) = New Country1(sName, iPop, dCons, dInvest, dNetIncm, dRange, iInfDeaths, iEducated)
+            Case 2
 
-            contName = InputBox("Name of Continent")
-            contPop = CInt(InputBox("Continent's Population"))
-            contCountries = CInt(InputBox("Number of Countries"))
-            Cntry1(i).Continent = New Continent(contName, contCountries, contPop)
+                Dim ND As Integer
+                Dim NB As Integer
+                Dim NU As Integer
 
-            sName = InputBox("Enter Country2 Name")
-            iPop = CInt(InputBox("Enter " + sName + "'s population"))
-            iDeaths = CInt(InputBox("Enter Number of Deaths"))
-            iBirths = CInt(InputBox("Enter number of Births"))
-            iUnemployed = CInt(InputBox("Enter Number of Unemployed"))
-            dCons = CDbl(InputBox("Enter Consumption"))
-            dInvest = CDbl(InputBox("Enter Invesntment"))
-            Cntry2(i) = New Country2(sName, iPop, dCons, dInvest, iDeaths, iBirths, iUnemployed)
+                Nam = InputBox("What is the name of country2?")
+                Pop = CInt(InputBox("What is the population of the country " & Nam))
+                Consump = CDbl(InputBox("What is the consumption of the country " & Nam))
+                Invest = CDbl(InputBox("What is the investment of the country per annum? " & Nam))
+                ND = CInt(InputBox("What is the number of deaths for the country " & Nam))
+                NB = CInt(InputBox("What is the number of births for the country " & Nam))
+                NU = CInt(InputBox("What is the number of unemployed for the country " & Nam))
 
-            contName = InputBox("Name of Continent")
-            contPop = CInt(InputBox("Continent's Population"))
-            contCountries = CInt(InputBox("Number of Countries"))
-            Cntry2(i).Continent = New Continent(contName, contCountries, contPop)
+                Cont(2) = New Country2(Nam, Pop, Consump, Invest, ND, NB, NU)
 
-        Next
+
+        End Select
+
+
+
+
+
+
 
     End Sub
 
-    Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
-
-        Dim iPair As Integer
-
-        iPair = CInt(InputBox("Which pair of countries do you want to display"))
-
-        DisplayIG(1, 1, Cntry1(iPair).Name)
-        DisplayIG(1, 2, CStr(Cntry1(iPair).Population))
-        DisplayIG(1, 3, Cntry1(iPair).Continent.Name)
-
-        DisplayIG(2, 1, Cntry2(iPair).Name)
-        DisplayIG(2, 2, CStr(Cntry2(iPair).Population))
-        DisplayIG(2, 3, Cntry2(iPair).Continent.Name)
+    Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnCountry1.Click
+        Dim c1 As Country1
+        c1 = TryCast(Cont(1), Country1)
+        DisplayC1(1, 1, c1.Name)
+        DisplayC1(2, 1, CStr(c1.Population))
+        DisplayC1(3, 1, CStr(c1.CalcGDP))
+        DisplayC1(4, 1, CStr(c1.IMR))
+        DisplayC1(5, 1, CStr(c1.Literacy))
+        DisplayC1(6, 1, CStr(c1.GNP))
 
     End Sub
 
     Private Sub FrmGDP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        grdDisplay.Rows = 4
-        grdDisplay.Cols = 6
-        DisplayIG(1, 0, "Country #1")
-        DisplayIG(2, 0, "Country #2")
 
-        DisplayIG(0, 1, "Name")
-        DisplayIG(0, 2, "Population")
-        DisplayIG(0, 3, "Continent")
+        grdCountry1.Rows = 7
+        grdCountry1.Cols = 2
 
+        DisplayC1(0, 0, " Details")
+        DisplayC1(1, 0, " Country Name")
+        DisplayC1(2, 0, " Population")
+        DisplayC1(3, 0, "GDP")
+        DisplayC1(4, 0, "IMRC")
+        DisplayC1(5, 0, "Literacy")
+        DisplayC1(6, 0, "GNPC")
+        DisplayC1(0, 1, "Value")
 
+        grdCountry2.Rows = 7
+        grdCountry2.Cols = 2
+
+        DisplayC2(0, 0, " Details")
+        DisplayC2(1, 0, " Country Name")
+        DisplayC2(2, 0, " Population")
+        DisplayC2(3, 0, "GDP")
+        DisplayC2(4, 0, "Number Births")
+        DisplayC2(5, 0, "Number Deaths")
+        DisplayC2(6, 0, "Number Of Unemployed")
+        DisplayC2(0, 1, "Value")
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCountry2.Click
+        Dim c2 As Country2
+        c2 = TryCast(Cont(2), Country2)
+        DisplayC2(1, 1, c2.Name)
+        DisplayC2(2, 1, CStr(c2.Population))
+        DisplayC2(3, 1, CStr(c2.CalcGDP))
+        DisplayC2(4, 1, CStr(c2.Birthrates))
+        DisplayC2(5, 1, CStr(c2.DeathRates))
+        DisplayC2(6, 1, CStr(c2.UnemployedRates))
     End Sub
 End Class
